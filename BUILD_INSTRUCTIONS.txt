@@ -1,4 +1,6 @@
 dotnet publish -c Release -r win-x64 /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true /p:PublishTrimmed=false
+The file will be located under FModel\bin\Release\net8.0-windows\win-x64\publish as a single binary
+
 
 
 # Linux
