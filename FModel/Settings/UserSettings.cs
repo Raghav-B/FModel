@@ -23,11 +23,13 @@ namespace FModel.Settings
     public sealed class UserSettings : ViewModel
     {
         public static UserSettings Default { get; set; }
-#if DEBUG
-        public static readonly string FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FModel", "AppSettings_Debug.json");
-#else
-        public static readonly string FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FModel", "AppSettings.json");
-#endif
+        //#if DEBUG
+        //public static readonly string FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FModel", "AppSettings_Debug.json");
+        //#else
+        // public static readonly string FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FModel", "AppSettings.json");
+        public static readonly string FilePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "AppSettings.json");
+//#endif
+
 
         static UserSettings()
         {
