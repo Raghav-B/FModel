@@ -1,0 +1,18 @@
+
+## Windows
+
+```bash
+cd FModel
+dotnet publish FModel.sln -c Release -r win-x64 /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true /p:PublishTrimmed=false
+# The file will be located under FModel\bin\Release\net8.0-windows\win-x64\publish as a single binary
+```
+## Linux
+
+```bash
+# sudo apt install dotnet-sdk-8.0
+sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-10.0
+sudo apt-get update && \
+  sudo apt-get install -y aspnetcore-runtime-8.0
+sudo apt-get install -y dotnet-runtime-8.0
+```
